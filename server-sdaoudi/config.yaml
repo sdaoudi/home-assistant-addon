@@ -1,0 +1,12 @@
+name: "Server Sdaoudi"
+description: "My first real add-on Server!"
+version: "1.0.0"
+slug: "server-sdaoudi"
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+startup: before
