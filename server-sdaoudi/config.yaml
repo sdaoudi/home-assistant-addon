@@ -1,12 +1,44 @@
 name: "Server Sdaoudi"
 description: "My first real add-on Server!"
-version: "1.0.0"
+version: "1.0.5"
 slug: "server-sdaoudi"
+url: https://github.com/sdaoudi/home-assistant-addon
+startup: services
+ingress: true
+ingress_port: 0
+ingress_stream: true
 init: false
+panel_icon: mdi:console
+panel_title: Terminal
+homeassistant: 0.92.0b2
 arch:
   - aarch64
   - amd64
   - armhf
   - armv7
   - i386
-startup: before
+homeassistant_api: true
+host_network: true
+uart: true
+usb: true
+gpio: true
+audio: true
+apparmor: false
+host_dbus: true
+docker_api: true
+privileged:
+  - NET_ADMIN
+  - SYS_ADMIN
+  - SYS_RAWIO
+  - SYS_TIME
+  - SYS_NICE
+devices:
+  - /dev/mem
+map:
+  - config:rw
+  - ssl:rw
+  - addons:rw
+  - media:rw
+  - share:rw
+  - backup:rw
+journald: true
