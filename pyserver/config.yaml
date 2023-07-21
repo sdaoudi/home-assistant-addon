@@ -1,0 +1,11 @@
+name: "PyServer"
+description: "PyServer, My first real add-on!"
+version: "1.0.0"
+slug: "pyserver"
+init: false
+arch:
+  - amd64
+startup: before
+ports:
+  8000/tcp: 8000
+image: ghcr.io/sdaoudi/pyserver:1.0.0
