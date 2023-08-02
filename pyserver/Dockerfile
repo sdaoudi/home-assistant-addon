@@ -1,4 +1,6 @@
-FROM ghcr.io/hassio-addons/base:14.0.3
+# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
+ARG BUILD_FROM
+FROM $BUILD_FROM
 
 # Install requirements for add-on
 RUN \

@@ -1,12 +1,16 @@
 name: "PyServer"
-description: "PyServer, My first real add-on!"
-version: "1.0.0"
+description: "PyServer, My first real add-on with devcontainers!"
+version: "1.1.2"
 slug: "pyserver"
 url: https://github.com/sdaoudi/home-assistant-addon
 init: false
 arch:
+  - armhf
+  - armv7
+  - aarch64
   - amd64
-startup: before
+  - i386
+startup: application
 ports:
   8000/tcp: 8000
-image: ghcr.io/sdaoudi/pyserver
+image: "ghcr.io/sdaoudi/{arch}-pyserver"
