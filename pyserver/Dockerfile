@@ -1,11 +1,11 @@
-# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
-ARG BUILD_FROM
-FROM $BUILD_FROM
+ARG BUILD_FROM=ghcr.io/hassio-addons/base:14.0.7
+# hadolint ignore=DL3006
+FROM ${BUILD_FROM}
 
 # Install requirements for add-on
 RUN \
   apk add --no-cache \
-    python3
+    python3=3.11.4-r0
 
 # Python 3 HTTP Server serves the current working dir
 # So let's set it to our add-on persistent data directory.
