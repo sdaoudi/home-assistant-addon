@@ -1,6 +1,6 @@
 name: "PyServer"
 description: "PyServer, My first real add-on with devcontainers!"
-version: "1.1.2"
+version: dev
 slug: "pyserver"
 url: https://github.com/sdaoudi/home-assistant-addon
 init: false
